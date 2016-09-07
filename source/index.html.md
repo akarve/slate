@@ -65,9 +65,14 @@ DashboardSerializer(dashboard_obj).data
 
 TODO: Synchronize with backend deploys to avoid race conditions (see Heroku email chain)
 
-* `gulp deploy` - builds production optimized JS app bundle; requires `firebase deploy`
-to actually hit the internets
+> Clean, build, and deploy optimized JS app bundle (plus CSS, images, all web assets).
+Defaults to stage. Use `--production` with caution:
 
+```shell
+gulp cdn-deploy [--production]
+```
+
+### Details (gulp does this for you)
 * firebase environments (alias = full_name)
     * stage = quilttest
     * production = quilitdata
