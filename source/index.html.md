@@ -112,10 +112,31 @@ newdash = Dashboard.objects.create(
 # to inspect
 Dashboard.objects.all()
 Dashboard.objects.filter(id=,name=, …):
-
 ```
 - user only needs to enter one of table= or table_id=
 
+## Routing
+
+> Require router in a component:
+
+```javascript
+{
+  contextTypes: {
+    router: React.PropTypes.object.isRequired
+  }
+}
+```
+
+> Navigate with router:
+
+```javascript
+  this.context.router.push(ROUTE)
+```
+
+> URL Parameters:
+```javascript
+this.props.params
+```
 
 # Endpoints
 
