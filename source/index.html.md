@@ -30,17 +30,15 @@ Starting good habits from 9/6/2016. Probably.
 - @kevin write something here
 
 ## Frontend
-- npm and gulp
+- npm and gulp for building and dependencies
 - `npm test` to run unit tests (for redux)
-- Mixture of redux (Quilt dialog) and barebones React (everything else)
-- `gulp deploy` - builds production bundle
-- `firebase deploy` - deploys to CDN
+- Mixture of redux (Quilt dialog) and React (everything else) bound to Firebase
 
 ### Routing
 
 > Require router in a component:
 
-```javascript
+```
 {
   contextTypes: {
     router: React.PropTypes.object.isRequired
@@ -50,12 +48,12 @@ Starting good habits from 9/6/2016. Probably.
 
 > Navigate with router:
 
-```javascript
+```
   this.context.router.push(ROUTE)
 ```
 
 > URL Parameters:
-```javascript
+```
 this.props.params
 ```
 
@@ -226,7 +224,7 @@ Tables
 
 #### Data format
 
-``` sourceCode
+``` 
 {
   'name': string,
   'description': text `<a>, <i>, <em>, <strong>, <b>` tags supported; automatic linkification of URLs
@@ -284,7 +282,7 @@ identifier.
 
 #### Data format
 
-``` sourceCode
+``` 
 {
   'name': string,
   'description': text `<a>, <i>, <em>, <strong>, <b>` tags supported; automatic linkification of URLs
@@ -321,7 +319,7 @@ Columns
 `POST /tables/TABLE_ID/columns/`
 
 #### Data format
-``` sourceCode
+``` 
     {
        'name': string,
        'sqlname': optional field name string,
@@ -341,7 +339,7 @@ identifier.
 
 #### Data format
 
-``` sourceCode
+``` 
     {
        'name': string,
        'sqlname': optional field name string,
@@ -370,7 +368,7 @@ Data
 
 `POST /data/TABLE_ID/rows/`
 -   Use column `sqlname` as keys in input data
-``` sourceCode
+``` 
     [
       {columnSqlname0: value0, columnSqlname1 : value1, ... },
       ...
@@ -382,7 +380,7 @@ Data
 `GET /data/TABLE_ID/rows/ROW_ID`
 
 #### Returns
-``` sourceCode
+``` 
       {columnSqlname0: value0, columnSqlname1 : value1, ... }
 ```
 
@@ -391,7 +389,7 @@ Data
 - query params: [order_by, search]
 
 #### Returns
-``` sourceCode
+``` 
     [
       {columnSqlname0: value0, columnSqlname1 : value1, ... },
       ...
@@ -405,7 +403,7 @@ Branch Data
 
 `POST /data/TABLE_ID/branches/BRANCH_NAME/rows/`
 -   Use column `sqlname` as keys in input data
-``` sourceCode
+``` 
     [
       {columnSqlname0: value0, columnSqlname1 : value1, ... },
       ...
@@ -417,7 +415,7 @@ Branch Data
 `GET /data/TABLE_ID/branches/BRANCH_NAME/rows/ROW_ID`
 
 #### Returns
-``` sourceCode
+``` 
       {columnSqlname0: value0, columnSqlname1 : value1, ... }
 ```
 
@@ -426,7 +424,7 @@ Branch Data
 - query params: [order_by, search]
 
 #### Returns
-``` sourceCode
+``` 
     [
       {columnSqlname0: value0, columnSqlname1 : value1, ... },
       ...
@@ -469,7 +467,7 @@ Genome Math
 `POST /genemath/`
 
 #### Data Format
-``` sourceCode
+``` 
 
     {
       'operator': one of 'Intersect' or 'Subtract',
