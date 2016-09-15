@@ -1,12 +1,6 @@
 ---
 title: Engineering Reference
 
-language_tabs:
-  - shell
-  - python
-  - javascript
-  - SQL
-
 toc_footers:
   - <a href='https://github.com/tripit/slate'>Docs powered by Slate</a>
 
@@ -380,8 +374,8 @@ Data
 `GET /data/TABLE_ID/rows/ROW_ID`
 
 #### Returns
-``` 
-      {columnSqlname0: value0, columnSqlname1 : value1, ... }
+```json
+  {columnSqlname0: value0, columnSqlname1 : value1, ... }
 ```
 
 ### List/Search (multiple rows)
